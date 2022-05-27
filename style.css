@@ -5,14 +5,14 @@ body {
   font-family: Lato, sans-serif;
 }
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
 input,button{
-  outline:none;
+  outline: none;
 }
 .header {
   width: 500px;
@@ -27,7 +27,7 @@ input,button{
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .header {
     text-align: center;
   }
@@ -71,7 +71,7 @@ input,button{
   text-transform: uppercase;
 }
 .item__input {
-  display:none
+  display: none
   margin: 0;
   width: 226px
   font-size: 18px;
@@ -130,10 +130,10 @@ input,button{
 
 
 .editMode .item__input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .editMode .item__label {
-  display:none;
+  display: none;
 }
