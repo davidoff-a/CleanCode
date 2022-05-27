@@ -33,12 +33,12 @@ const createNewTaskElement=(taskString)=>{
   //label
   const label=createEl({tag: "label", classes:["task","item__label"], attribs:{}});//label
   //input (text)
-  const editInput=createEl({tag: "input", classes:[], attribs:{}});//text
+  const editInput=createEl({tag: "input", classes:["task","item__input"], attribs:{type: "text"}});//text
   //button.edit
-  const editButton=createEl({tag: "button", classes:["task","item__input"], attribs:{type: "text"}});//edit button
+  const editButton=createEl({tag: "button", classes:["btn","edit"], attribs:{}});//edit button
 
   //button.delete
-  const deleteButton=createEl({tag: "button", classes:["btn","edit"], attribs:{}});//delete button
+  const deleteButton=createEl({tag: "button", classes:["btn","delete"], attribs:{}});//delete button
   const deleteButtonImg=createEl({tag: "img", classes:["btn__icon"], attribs:{src:"./remove.svg",alt:"remove"}});//delete button image
 
   label.innerText=taskString;
@@ -75,14 +75,14 @@ const addTask=()=>{
 
 //Edit an existing task.
 
-const editTask=function(){
+const editTask=function (){
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
 
 
   const listItem=this.parentNode;
 
-  const editInput=listItem.querySelector(".item__label");
+  const editInput=listItem.querySelector(".item__input");
   const label=listItem.querySelector(".item__label");
   const editBtn=listItem.querySelector(".edit");
   const containsClass=listItem.classList.contains("editMode");
@@ -127,7 +127,7 @@ const taskCompleted=function(){
 }
 
 
-const taskIncomplete=()=>{
+const taskIncomplete=function(){
   console.log("Incomplete Task...");
 //Mark task as incomplete.
   //When the checkbox is unchecked
