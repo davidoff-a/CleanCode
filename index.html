@@ -18,8 +18,7 @@
       <h3 class="title">Add Item</h3>
       <ul id="inbox" class="task-list">
         <li  class="task-list__item item row">
-          <input id="new-task__content"
-                 class="task"
+          <input class="task new-task__content"
                  type="text">
           <button class="btn">Add</button>
         </li>
@@ -38,10 +37,10 @@
         </li>
         <li class="task-list__item item row edit-mode">
           <input type="checkbox" class="item__check">
-          <label class="task item__label">Go Shopping</label>
+          <label class="task item__label hide">Go Shopping</label>
           <input type="text"
                  value="Go Shopping"
-                 class="task item__input">
+                 class="task item__input item__input_edit">
           <button class="btn edit">Save</button>
           <button class="btn delete">
             <img class="btn__icon" src="./remove.svg" alt="remove">
@@ -52,7 +51,7 @@
       <ul class="task-list done">
         <li class="task-list__item item row">
           <input type="checkbox" class="item__check" checked>
-          <label class="task item__label">See the Doctor</label>
+          <label class="task item__label item__label_strike">See the Doctor</label>
           <input type="text" class="task item__input">
           <button class="btn edit">Edit</button>
           <button class="btn delete">

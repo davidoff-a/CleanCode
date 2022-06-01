@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-const taskInput=document.getElementById("new-task__content");//Add a new task.
+const taskInput=document.querySelector(".new-task__content");//Add a new task.
 const addButton=document.getElementsByTagName("button")[0];//first button
 const incompleteTaskHolder=document.querySelector(".undone");//ul of #incompleteTasks
 const completedTasksHolder=document.querySelector(".done");//completed-tasks
@@ -84,6 +84,8 @@ const editTask=function (){
   const label=listItem.querySelector(".item__label");
   const editBtn=listItem.querySelector(".edit");
   const containsClass=listItem.classList.contains("edit-mode");
+  label.classList.toggle("hide");
+  editInput.classList.toggle("item__input_edit");
   //If class of the parent is .editmode
   if(containsClass){
 
@@ -119,6 +121,8 @@ const taskCompleted=function(){
 
   //Append the task list item to the #completed-tasks
   const listItem=this.parentNode;
+  const listItemLabel = listItem.querySelector(".item__label");
+  listItemLabel.classList.toggle("item__label_strike");
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
@@ -131,6 +135,8 @@ const taskIncomplete=function(){
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
   const listItem=this.parentNode;
+  const listItemLabel = listItem.querySelector(".item__label");
+  listItemLabel.classList.toggle("item__label_strike");
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
 }
