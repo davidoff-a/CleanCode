@@ -5,16 +5,14 @@ body {
   font-family: Lato, sans-serif;
 }
 ul {
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding: 0px;
 }
-li,
-h3 {
-  list-style: none;
+li, h3 {
+  list-style:none;
 }
-input,
-button{
-  outline: none;
+input,button{
+  outline:none;
 }
 .header {
   width: 500px;
@@ -25,13 +23,13 @@ button{
 .header__img {
   width: 100%;
 }
-.header__link {
+.header .more_inf {
   font-family: fantasy, cursive;
 }
-@media (max-width: 768px) {
-  .header {
-    text-align: center;
-  }
+
+@media (max-width:768px) {
+.header { text-align: center;
+}
 }
 .main {
   display: block;
@@ -41,24 +39,28 @@ button{
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1;
+  flex-grow: 1
 }
 .row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
+
 .btn {
   background: none;
-  border: 0;
+  border: 0px;
   color: #888;
   font-size: 15px;
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.btn:hover {
+<<<<<<< HEAD
+button:hover {
   color: #3a3a3a;
+=======
+.btn:hover {
+  color: #3a3A3a;
+>>>>>>> 66bf8a2 (refactor: Basic CSS 3.4. Replace tag selectors with named selectors)
 }
 /* Heading */
 .title {
@@ -71,9 +73,7 @@ button{
   text-transform: uppercase;
 }
 .item__input {
-  display: none;
   margin: 0;
-  width: 226px;
   font-size: 18px;
   line-height: 18px;
   height: 21px;
@@ -87,19 +87,23 @@ button{
 .item__input:focus {
   color: #333;
 }
+
 /* New Task */
-.new-task__content {
+
+#new-task {
   width: 318px;
 }
+
 /* Task list */
-.task-list{
-  width: 100%;
-}
 .task-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .item__check {
   margin: 0 10px;
 }
@@ -109,6 +113,9 @@ button{
   font-size: 18px;
   width: 226px;
 }
+.item__input[type="text"] {
+  width: 226px
+}
 .btn__icon {
   height: 2em;
   transform: rotateZ(45deg);
@@ -117,16 +124,23 @@ button{
 .btn__icon:hover {
   transform: rotateZ(0);
 }
+
 /* Completed */
-.item__label_strike {
-  text-decoration: line-through;
+#done .item__label {
+  text-decoration: line-through
   color: #888;
 }
+
 /* Edit Task */
-.item__input_edit{
-  display: inline-block;
-  width: 224px;
+.item__input {
+  display:none
 }
-.hide {
-  display: none;
+
+.editMode .item__input {
+  display:inline-block;
+  width:224px
+}
+
+.editMode .item__label {
+  display:none;
 }
