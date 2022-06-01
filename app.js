@@ -10,8 +10,8 @@
 
 const taskInput=document.getElementById("new-task__content");//Add a new task.
 const addButton=document.getElementsByTagName("button")[0];//first button
-const incompleteTaskHolder=document.getElementById("undone");//ul of #incompleteTasks
-const completedTasksHolder=document.getElementById("done");//completed-tasks
+const incompleteTaskHolder=document.querySelector(".undone");//ul of #incompleteTasks
+const completedTasksHolder=document.querySelector(".done");//completed-tasks
 
 
 const createEl=(data)=>{

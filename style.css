@@ -92,6 +92,9 @@ button{
   width: 318px;
 }
 /* Task list */
+.task-list{
+  width: 100%;
+}
 .task-list__item {
   overflow: hidden;
   padding: 20px 0;
@@ -115,7 +118,7 @@ button{
   transform: rotateZ(0);
 }
 /* Completed */
-#done .item__label {
+.done .item__label {
   text-decoration: line-through;
   color: #888;
 }
