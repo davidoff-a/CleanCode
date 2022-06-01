@@ -25,7 +25,7 @@ button{
 .header__img {
   width: 100%;
 }
-.header .header__link {
+.header__link {
   font-family: fantasy, cursive;
 }
 @media (max-width: 768px) {
@@ -88,7 +88,7 @@ button{
   color: #333;
 }
 /* New Task */
-#new-task__content {
+.new-task__content {
   width: 318px;
 }
 /* Task list */
@@ -118,15 +118,15 @@ button{
   transform: rotateZ(0);
 }
 /* Completed */
-.done .item__label {
+.item__label_strike {
   text-decoration: line-through;
   color: #888;
 }
 /* Edit Task */
-.edit-mode .item__input {
+.item__input_edit{
   display: inline-block;
   width: 224px;
 }
-.edit-mode .item__label {
+.hide {
   display: none;
 }
