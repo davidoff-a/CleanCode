@@ -92,6 +92,9 @@ button{
   width: 318px;
 }
 /* Task list */
+.task-list{
+  width: 100%;
+}
 .task-list__item {
   overflow: hidden;
   padding: 20px 0;
@@ -115,15 +118,15 @@ button{
   transform: rotateZ(0);
 }
 /* Completed */
-#done .item__label {
+.done .item__label {
   text-decoration: line-through;
   color: #888;
 }
 /* Edit Task */
-.editMode .item__input {
+.edit-mode .item__input {
   display: inline-block;
   width: 224px;
 }
-.editMode .item__label {
+.edit-mode .item__label {
   display: none;
 }

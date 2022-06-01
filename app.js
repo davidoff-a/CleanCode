@@ -10,8 +10,8 @@
 
 const taskInput=document.getElementById("new-task__content");//Add a new task.
 const addButton=document.getElementsByTagName("button")[0];//first button
-const incompleteTaskHolder=document.getElementById("undone");//ul of #incompleteTasks
-const completedTasksHolder=document.getElementById("done");//completed-tasks
+const incompleteTaskHolder=document.querySelector(".undone");//ul of #incompleteTasks
+const completedTasksHolder=document.querySelector(".done");//completed-tasks
 
 
 const createEl=(data)=>{
@@ -83,7 +83,7 @@ const editTask=function (){
   const editInput=listItem.querySelector(".item__input");
   const label=listItem.querySelector(".item__label");
   const editBtn=listItem.querySelector(".edit");
-  const containsClass=listItem.classList.contains("editMode");
+  const containsClass=listItem.classList.contains("edit-mode");
   //If class of the parent is .editmode
   if(containsClass){
 
@@ -97,7 +97,7 @@ const editTask=function (){
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("editMode");
+  listItem.classList.toggle("edit-mode");
 };
 
 
